@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обзор Здоровья</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="location.href='chat.html'">Чат</button>
+        <button onclick="location.href='calendar.html'">Календарь</button>
+        <button onclick="location.href='statistics.html'">Статистика</button>
+    </div>
+    <div class="container">
+        <div class="health-overview">
+            <h1>Обзор Здоровья</h1>
+            <p>5 декобря 2024</p>
+            <div class="metrics">
+                <div class="metric">
+                    <img src="blood-sugar.png" alt="Сахар в крови">
+                    <p>Сахар в крови</p>
+                    <p>80 мг/дЛ</p>
+                    <p>Норма</p>
+                </div>
+                <div class="metric">
+                    <img src="heart-rate.png" alt="Частота сердечных сокращений">
+                    <p>Частота сердечных сокращений</p>
+                    <p>98 уд/мин</p>
+                    <p>Норма</p>
+                </div>
+                <div class="metric">
+                    <img src="blood-pressure.png" alt="Артериальное давление">
+                    <p>Артериальное давление</p>
+                    <p>102/72 мм рт. ст.</p>
+                    <p>Норма</p>
+                </div>
+            </div>
+            <div class="activity-growth">
+                <h2>Динамика Активности</h2>
+                <canvas id="activityChart"></canvas>
+            </div>
+            <div class="upcoming-appointment">
+                <h2>Предстоящий Приём</h2>
+                <p>20 августа 2024 - Консультация с доктором Фадеевым</p>
+            </div>
+        </div>
+        <div class="bmi-calculator">
+            <h2>Калькулятор ИМТ</h2>
+            <div class="bmi-inputs">
+                <div>
+                    <label for="height">Рост</label>
+                    <input type="number" id="height" placeholder="см">
+                </div>
+                <div>
+                    <label for="weight">Вес</label>
+                    <input type="number" id="weight" placeholder="кг">
+                </div>
+            </div>
+            <button onclick="calculateBMI()">Рассчитать ИМТ</button>
+            <div class="bmi-result">
+                <p>Индекс массы тела (ИМТ): <span id="bmi-value">24.9</span></p>
+                <p id="bmi-status">Вы здоровы</p>
+            </div>
+            <div class="body-measurements">
+                <h2>Измерения Тела</h2>
+                <p>Последняя проверка 2 дня назад</p>
+                <div class="measurements-container">
+                    <div class="measurements">
+                        <div>
+                            <p>Грудь (дюймы)</p>
+                            <p>44.5 ↑</p>
+                        </div>
+                        <div>
+                            <p>Талия (дюймы)</p>
+                            <p>34 ↓</p>
+                        </div>
+                        <div>
+                            <p>Бёдра (дюймы)</p>
+                            <p>42.5 ↓</p>
+                        </div>
+                    </div>
+                    <img src="body.png" alt="Измерения тела" class="body-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

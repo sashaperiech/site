@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="statistics_styles.css">
+</head>
+<body>
+    <button onclick="location.href='index.html'" class="back-button">Назад</button>
+    <div class="statistics-container">
+        <div class="statistics-cards">
+            <div class="statistics-card">
+                <h3>АКТИВНОСТЬ</h3>
+                <select>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+                <div class="statistics-circle">
+                    <div class="statistics-percentage" style="background-color: #ff6347;">25%</div>
+                </div>
+            </div>
+            <div class="statistics-card">
+                <h3>СОН</h3>
+                <select>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+                <div class="statistics-circle">
+                    <div class="statistics-percentage" style="background-color: #4caf50;">79%</div>
+                </div>
+            </div>
+            <div class="statistics-card">
+                <h3>САМОЧУВСТВИЕ</h3>
+                <select>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+                <div class="statistics-circle">
+                    <div class="statistics-percentage" style="background-color: #ff9800;">52%</div>
+                </div>
+            </div>
+        </div>
+        <div class="health-monitoring">
+            <h3>МОНИТОРИНГ ЗДОРОВЬЯ</h3>
+            <select>
+                <option>Monthly</option>
+                <option>Weekly</option>
+                <option>Daily</option>
+            </select>
+            <div class="monitoring-buttons">
+                <button class="active" onclick="showChart('stress')">Уровень стресса</button>
+                <button onclick="showChart('pulse')">Пульс</button>
+                <button onclick="showChart('temperature')">Температура</button>
+                <button onclick="showChart('calories')">Сожжённые калории</button>
+            </div>
+            <canvas id="healthMonitoringChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="statistics_scripts.js"></script>
+</body>
+</html>
