@@ -40,61 +40,74 @@
             <div class="calendar-events">
                 <div class="calendar-row">
                     <div class="calendar-cell">
-                        <div class="event orange">
+                        <div class="event orange" onclick="editEvent(this)">
                             <p>07:00 - 17:00 (10 ч)</p>
                             <p>Тренировочный зал</p>
                         </div>
-                        <div class="event purple">
-                            <p>09:00 - 08:00 (1 ч)</p>
+                        <div class="event purple" onclick="editEvent(this)">
+                            <p>08:00 - 09:00 (1 ч)</p>
                             <p>Фитнес</p>
                         </div>
                     </div>
                     <div class="calendar-cell">
-                        <div class="event orange">
-                            <p>07:00 - 17:00 (10 ч)</p>
-                            <p>Тренировочный зал</p>
-                        </div>
-                    </div>
-                    <div class="calendar-cell">
-                        <div class="event orange">
+                        <div class="event orange" onclick="editEvent(this)">
                             <p>07:00 - 17:00 (10 ч)</p>
                             <p>Тренировочный зал</p>
                         </div>
                     </div>
                     <div class="calendar-cell">
-                        <div class="event purple">
+                        <div class="event orange" onclick="editEvent(this)">
+                            <p>07:00 - 17:00 (10 ч)</p>
+                            <p>Тренировочный зал</p>
+                        </div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="event purple" onclick="editEvent(this)">
                             <p>07:00 - 08:00 (1 ч)</p>
                             <p>Фитнес</p>
                         </div>
-                        <div class="event purple">
-                            <p>07:00 - 08:00 (1 ч)</p>
+                        <div class="event purple" onclick="editEvent(this)">
+                            <p>08:00 - 09:00 (1 ч)</p>
                             <p>Фитнес</p>
                         </div>
-                        <div class="event purple">
+                        <div class="event purple" onclick="editEvent(this)">
+                            <p>09:00 - 10:00 (1 ч)</p>
+                            <p>Фитнес</p>
+                        </div>
+                    </div>
+                    <div class="calendar-cell">
+                        <div class="event purple" onclick="editEvent(this)">
                             <p>07:00 - 08:00 (1 ч)</p>
                             <p>Фитнес</p>
                         </div>
                     </div>
                     <div class="calendar-cell">
-                        <div class="event purple">
+                        <div class="event purple" onclick="editEvent(this)">
                             <p>07:00 - 08:00 (1 ч)</p>
                             <p>Фитнес</p>
                         </div>
                     </div>
                     <div class="calendar-cell">
-                        <div class="event purple">
-                            <p>07:00 - 08:00 (1 ч)</p>
-                            <p>Фитнес</p>
-                        </div>
-                    </div>
-                    <div class="calendar-cell">
-                        <div class="event orange">
+                        <div class="event orange" onclick="editEvent(this)">
                             <p>07:00 - 17:00 (10 ч)</p>
                             <p>Тренировочный зал</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" onclick="cancelEdit()">&times;</span>
+            <h3>Редактировать тренировку</h3>
+            <label for="event-type">Тип тренировки:</label>
+            <input type="text" id="event-type">
+            <label for="event-duration">Продолжительность (ч):</label>
+            <input type="number" id="event-duration">
+            <label for="event-intensity">Интенсивность:</label>
+            <input type="text" id="event-intensity">
+            <button onclick="saveEvent()">Сохранить</button>
         </div>
     </div>
     <script src="calendar_scripts.js"></script>
